@@ -10,6 +10,9 @@ A `Makefile` is provided to facilitate the generation and cleanup of new days.
 
 Once generated, the day can be imported into the [main.go](main.go) file on line 8 and added to the map on line 18.
 
+I recommend updating forking the repo and updating your [go.mod](go.mod) module to something like:
+`github.com/<your-gitgub>/advent-of-code-<year>`
+
 ## Generating a new Day's Challenge
 
 Generate a Day 1 challenge
