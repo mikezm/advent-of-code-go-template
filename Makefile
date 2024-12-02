@@ -1,5 +1,3 @@
-# Makefile
-
 ifeq ($(d),)
     $(error Please provide a value for d. Example: make gen d=1)
 endif
@@ -12,4 +10,4 @@ gen: ./scripts/gen.sh
 clean:
 	rm -rf "day$(d)"
 
-.PHONY: run
+.PHONY: gen clean all
