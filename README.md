@@ -1,33 +1,42 @@
 # advent-of-code-go-template
-A simple template for completing [Advent Of Code](https://adventofcode.com) challenges in Golang.
+A very simple template for completing [Advent Of Code](https://adventofcode.com) challenges in Golang.
 
 ## Usage
 
-The template uses an interface to provide the functions `A()` and `B()` for each day's challenge. 
+The template uses an interface to the functions `A()` and `B()` for each day's challenge. 
 These can be imported into the `main.go` file as show. 
 
-A `Makefile` is provided to facilitate the generation and cleanup of new days.
+A `Makefile` is provided to facilitate the generation and cleanup of new days and an empty input.txt file.
 
-Once generated, the day can be imported into the [main.go](main.go) file on line 8 and added to the map on line 18.
+Once generated, the day can be imported into the [main.go](main.go) file.
 
-I recommend updating forking the repo and updating your [go.mod](go.mod) module to something like:
-`github.com/<your-gitgub>/advent-of-code-<year>`
+[Learn more about creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
 ## Generating a new Day's Challenge
 
-Generate a Day 1 challenge
+Generate a Day 2challenge
 
 ```shell
-make gen d=1
+make gen d=2
 ```
 
 This creates a new folder for the provided day, as well as a go file and an empty input.txt file. It is assumed you will
-copy the contents of the challenge's input file manually. 
+copy the contents of the challenge's input file manually.
 
-## Removing a Day's challenge
+Once created, update the imports in the `main.go` file accordingly:
 
-```shell
-make clean d=1
+```golang
+import (
+    ...
+    "github.com/mikezm/advent-of-code-2024/day2"
+)
+...
+...
+var challengeMap = challenges{
+	1: day1.Challenge{},
+	2: day2.Challenge{},
+}
+...
 ```
 
 This removes the day's folder and all it's contents. 

@@ -7,7 +7,4 @@ all: gen
 gen: ./scripts/gen.sh
 	bash $< $(d)
 
-clean:
-	rm -rf "day$(d)"
-
-.PHONY: gen clean all
+.PHONY: gen all
